@@ -5,7 +5,18 @@ module.exports = {
     author: `@chanonroy`,
   },
   plugins: [
+    `gatsby-plugin-typescript`,
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -14,15 +25,8 @@ module.exports = {
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
-        icon: `src/images/roy.png`,
-      },
-    },
-    `gatsby-plugin-styled-components`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        display: `minimal-ui`,
+        icon: `src/images/roy.png`, // This path is relative to the root of the site.
       },
     },
     {
