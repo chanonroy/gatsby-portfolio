@@ -2,19 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import Container from './shared/container';
 
-import layerImg from '../images/layers.svg';
-import browserImg from '../images/browser.svg';
-import databaseImg from '../images/database.svg';
+import rulerImg from '../images/ruler.svg';
+import designImg from '../images/design.svg';
+import serverImg from '../images/server.svg';
 import mobileImg from '../images/mobile.svg';
 import webImg from '../images/web.svg';
-import neuralImg from '../images/neural.svg';
+import circuitImg from '../images/circuit.svg';
 
 const skills = [
-  {
-    title: 'Product Design',
-    subItems: ['Adobe Suite, Sketch', 'User Research', 'A/B Testing'],
-    img: layerImg,
-  },
   {
     title: 'UI Development',
     subItems: [
@@ -22,7 +17,7 @@ const skills = [
       'Styled Components, Emotion',
       'Shared Library (npm)',
     ],
-    img: browserImg,
+    img: designImg,
   },
   {
     title: 'Web Apps',
@@ -35,18 +30,23 @@ const skills = [
     img: mobileImg,
   },
   {
+    title: 'Product Design',
+    subItems: ['Adobe Suite, Sketch', 'User Research', 'A/B Testing'],
+    img: rulerImg,
+  },
+  {
     title: 'API Design',
     subItems: ['Node, Express', 'REST, GraphQL (Apollo)', 'Auth and Security'],
-    img: databaseImg,
+    img: serverImg,
   },
   {
     title: 'Machine Learning',
     subItems: [
       'Tensorflow, Keras',
       'Python, Jupyter Notebook',
-      'Convolutional Neural Network (CNN)',
+      'Neural Networks',
     ],
-    img: neuralImg,
+    img: circuitImg,
   },
 ];
 
@@ -66,7 +66,7 @@ const Grid = styled.div`
 
 const Item = styled.div`
   text-align: center;
-  margin-bottom: 48px;
+  margin-bottom: 80px;
 `;
 
 const Title = styled.h1`
