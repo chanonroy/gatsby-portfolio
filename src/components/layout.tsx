@@ -9,7 +9,7 @@ interface LayoutProps {
 const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
-    color: $color-font;
+    color: ${({ theme }) => theme.colors.black};
     line-height: 1.5em;
     font-family: 'Open Sans', sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -22,7 +22,7 @@ const GlobalStyle = createGlobalStyle`
 
 const Layout = ({ children }: LayoutProps) => (
   <>
-    <GlobalStyle />
+    <GlobalStyle theme={theme} />
     <ThemeProvider theme={theme}>
       <main>{children}</main>
     </ThemeProvider>
