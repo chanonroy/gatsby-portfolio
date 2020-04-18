@@ -1,13 +1,14 @@
 import {
   faGithub,
   faLinkedin,
-  faDribbble,
   faCodepen,
   faMedium,
+  faInstagram,
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { FC } from 'react';
 import styled from 'styled-components';
+import building from '../images/ottawa.svg';
 
 const GradientBG = styled.div`
   display: flex;
@@ -27,7 +28,7 @@ const Title = styled.h2`
 `;
 
 const IconContainer = styled.div`
-  margin-bottom: 44px;
+  margin-bottom: 36px;
   svg {
 		# this is gross
     opacity: 0.8 !important;
@@ -38,12 +39,19 @@ const IconContainer = styled.div`
   }
 `;
 
+const BuildingContainer = styled.div`
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  height: 300px;
+`;
+
 const SubTitle = styled.h3`
-  font-size: 1.5em;
+  font-size: 1.3em;
 `;
 
 const LinkIcon = styled(FontAwesomeIcon)`
-  margin-right: 24px;
+  margin: 0 14px;
   opacity: 0.8;
 `;
 
@@ -57,12 +65,12 @@ const socialLinks = [
     icon: faGithub,
   },
   {
-    href: 'https://codepen.io/chanonroy/',
-    icon: faCodepen,
+    href: 'https://www.instagram.com/chanonroy/',
+    icon: faInstagram,
   },
   {
-    href: 'https://dribbble.com/chanonroy/buckets',
-    icon: faDribbble,
+    href: 'https://codepen.io/chanonroy/',
+    icon: faCodepen,
   },
   {
     href: 'https://medium.com/@chanonroy',
@@ -89,6 +97,10 @@ const Jumbo: FC = () => {
       </IconContainer>
       <Title> Hello, my name is Chanon </Title>
       <SubTitle> I&#39;m a software developer from Canada </SubTitle>
+
+      <BuildingContainer>
+        <img src={building} alt="building" />
+      </BuildingContainer>
     </GradientBG>
   );
 };
