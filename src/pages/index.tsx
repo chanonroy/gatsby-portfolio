@@ -1,22 +1,16 @@
 import React from 'react';
-
-import Layout from '../components/layout';
-import SEO from '../components/seo';
-import styled from 'styled-components';
 import Jumbo from '../components/jumbo';
 import Profile from '../components/profile';
-
-// const Square = styled.div`
-//   background-color: ${({ theme }) => theme.colors.primary};
-//   height: 50px;
-//   width: 50px;
-// `;
+import Layout from '../components/shared/layout';
+import SEO from '../components/shared/seo';
+import Skills from '../components/skills';
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Chanon Roy" />
+    <SEO title="Chanon Roy (2.0)" />
     <Jumbo />
     <Profile />
+    <Skills />
   </Layout>
 );
 

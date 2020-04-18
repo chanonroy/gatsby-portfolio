@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 import { ThemeProvider, createGlobalStyle } from 'styled-components';
-import theme from '../styles/theme';
+import theme from '../../styles/theme';
 
 interface LayoutProps {
   children: ReactNode;
