@@ -3,10 +3,12 @@
   <img alt="Gatsby" src="./src/images/roy.png" width="60" />
 </p>
 <h1 align="center">
-  Chanon Roy | Software Developer
+  My portfolio website
 </h1>
 
-This is version 2.0 of my portfolio site that is spun up using Gatsby.
+<p align="center">
+  This is version 2.0 of my portfolio site that is spun up using Gatsby.
+</p>
 
 ## 🚀 Quick start
 
