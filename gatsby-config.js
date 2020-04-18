@@ -5,6 +5,14 @@ module.exports = {
     author: `@chanonroy`,
   },
   plugins: [
+    // Google Analytics
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-74820007-1",
+      },
+    },
+    // TypeScript
     {
       resolve: `gatsby-plugin-typescript`,
       options: {
@@ -12,6 +20,7 @@ module.exports = {
         allExtensions: true,
       },
     },
+    // Styled Components
     `gatsby-plugin-styled-components`,
     {
       resolve: 'gatsby-plugin-eslint',
@@ -25,6 +34,17 @@ module.exports = {
         }
       }
     },
+    // Google Fonts
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Open Sans`
+        ],
+        display: 'swap'
+      }
+    },
+    // Head Data
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -33,8 +53,10 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    // TODO: What do these do?
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    // Manifest Data
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -46,12 +68,6 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/images/roy.png`, // This path is relative to the root of the site.
       },
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: "UA-74820007-1",
-      },
-    },
+    }
   ],
 }
