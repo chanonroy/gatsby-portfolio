@@ -5,7 +5,7 @@ import SEO from "../components/seo";
 import styled from "styled-components";
 
 const Square = styled.div`
-  background-color: mediumseagreen;
+  background-color: ${({ theme }) => theme.colors.primary};
   height: 50px;
   width: 50px;
 `;
