@@ -1,6 +1,8 @@
 const theme = {
   colors: {
-    primary: "mediumseagreen",
+    primary: 'mediumseagreen',
+    black: '#384047',
+    softGrey: '#999',
   },
 };
 
