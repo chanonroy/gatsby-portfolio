@@ -1,14 +1,14 @@
-import React from 'react'
+import React from "react";
 
-import Layout from '../components/layout'
-import SEO from '../components/seo'
-import styled from 'styled-components'
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+import styled from "styled-components";
 
 const Square = styled.div`
   background-color: mediumseagreen;
   height: 50px;
   width: 50px;
-`
+`;
 
 const IndexPage = () => (
   <Layout>
@@ -16,6 +16,6 @@ const IndexPage = () => (
     <h1>Hello people</h1>
     <Square />
   </Layout>
-)
+);
 
-export default IndexPage
+export default IndexPage;
