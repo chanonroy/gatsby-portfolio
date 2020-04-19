@@ -1,14 +1,13 @@
 import {
-  Instagram,
-  Github,
   Codepen,
-  Medium,
+  Github,
+  Instagram,
   Linkedin,
+  Medium,
 } from '@styled-icons/boxicons-logos';
 import React, { FC } from 'react';
 import styled from 'styled-components';
 import building from '../images/ottawa.svg';
-import Container from './shared/container';
 
 const GradientBG = styled.div`
   display: flex;
