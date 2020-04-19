@@ -59,7 +59,7 @@ const Contact = () => {
     <ContactCard>
       <ContactContainer>
         <Text>
-          <h1> Interested in Chatting? </h1>
+          <h1> Made it this far? </h1>
           <p>
             Send me a message and let&#39;s talk over coffee, tea, or a beer
           </p>

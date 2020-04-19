@@ -17,6 +17,9 @@ const GlobalStyle = createGlobalStyle`
      color: inherit;
      text-decoration: none;
     }
+    h1 {
+      line-height: 1.5;
+    }
   }
 `;
 

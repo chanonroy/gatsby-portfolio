@@ -6,6 +6,7 @@ import SEO from '../components/shared/seo';
 import Skills from '../components/skills';
 import Contact from '../components/contact';
 import Projects from '../components/projects';
+import Interests from '../components/interests';
 
 const IndexPage = () => (
   <Layout>
@@ -15,6 +16,7 @@ const IndexPage = () => (
     <Skills />
     <Contact />
     <Projects />
+    <Interests />
   </Layout>
 );
 

@@ -19,7 +19,7 @@ const Title = styled.h1`
 const Grid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 48px;
+  grid-column-gap: 80px;
 
   @media (max-width: ${({ theme }) => `${theme.breakpoints.sm}px`}) {
     grid-template-columns: 1fr 1fr;
