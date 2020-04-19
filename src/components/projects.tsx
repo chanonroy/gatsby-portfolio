@@ -87,7 +87,7 @@ const Projects = () => {
         <Title>Some of my side projects</Title>
         <Grid>
           {projects.map((project, i) => (
-            <GridItem key={i}>
+            <GridItem key={`${i}-${project.alt}`}>
               <a href={project.url} target="_blank" rel="noopener noreferrer">
                 <img src={project.img} alt={project.alt} />
               </a>

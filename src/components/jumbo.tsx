@@ -1,14 +1,14 @@
 import {
-  faGithub,
-  faLinkedin,
-  faCodepen,
-  faMedium,
-  faInstagram,
-} from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+  Instagram,
+  Github,
+  Codepen,
+  Medium,
+  Linkedin,
+} from '@styled-icons/boxicons-logos';
 import React, { FC } from 'react';
 import styled from 'styled-components';
 import building from '../images/ottawa.svg';
+import Container from './shared/container';
 
 const GradientBG = styled.div`
   display: flex;
@@ -16,7 +16,7 @@ const GradientBG = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: ${({ theme }) => `${theme.spacing.xs}px`};
+  padding: ${({ theme }) => `0 ${theme.spacing.xs}px`};
   background: linear-gradient(to bottom, #1e5799 9%, #2989d8 69%, #65ade6 100%);
   height: 100vh;
   max-height: 1200px;
@@ -25,7 +25,7 @@ const GradientBG = styled.div`
 
 const Title = styled.h2`
   font-size: 2.5em;
-  margin: 10px 0;
+  margin-bottom: 5px;
 
   @media (max-width: ${({ theme }) => `${theme.breakpoints.sm}px`}) {
     font-size: 1.7em;
@@ -33,19 +33,13 @@ const Title = styled.h2`
   }
 `;
 
-const IconContainer = styled.div`
-  margin-bottom: 20px;
-  svg {
-    transition: ${({ theme }) => theme.transition.normal};
-    opacity: 0.8 !important;
-    &:hover {
-      opacity: 1 !important;
-    }
-  }
+const SubTitle = styled.h3`
+  font-size: 1.3em;
+  margin: 5px 0 48px 0;
+
   @media (max-width: ${({ theme }) => `${theme.breakpoints.xs}px`}) {
-    svg {
-      font-size: 2.5em;
-    }
+    font-size: 1em;
+    text-align: center;
   }
 `;
 
@@ -71,67 +65,67 @@ const BuildingContainer = styled.div`
   }
 `;
 
-const SubTitle = styled.h3`
-  font-size: 1.3em;
-
-  @media (max-width: ${({ theme }) => `${theme.breakpoints.xs}px`}) {
-    font-size: 1em;
-    text-align: center;
-  }
+const IconGrid = styled.div`
+  display: flex;
 `;
 
-const LinkIcon = styled(FontAwesomeIcon)`
-  margin: 0 14px;
+const Icon = styled.span`
+  margin: 0 8px;
   opacity: 0.8;
+  transition: ${({ theme }) => theme.transition.normal}}
 
-  @media (max-width: ${({ theme }) => `${theme.breakpoints.md}px`}) {
-    margin: 0 8px;
+  &:hover {
+    opacity: 1;
   }
 `;
 
 const socialLinks = [
   {
+    name: 'linkedin',
     href: 'https://linkedin.com/in/chanonroy',
-    icon: faLinkedin,
+    icon: <Linkedin size={44} />,
   },
   {
+    name: 'github',
     href: 'https://github.com/chanonroy',
-    icon: faGithub,
+    icon: <Github size={44} />,
   },
   {
+    name: 'insta',
     href: 'https://www.instagram.com/chanonroy/',
-    icon: faInstagram,
+    icon: <Instagram size={44} />,
   },
   {
+    name: 'codepen',
     href: 'https://codepen.io/chanonroy/',
-    icon: faCodepen,
+    icon: <Codepen size={44} />,
   },
   {
+    name: 'medium',
     href: 'https://medium.com/@chanonroy',
-    icon: faMedium,
+    icon: <Medium size={44} />,
   },
 ];
 
 const Jumbo: FC = () => {
   return (
     <GradientBG>
-      <IconContainer>
+      <Title> Hello, my name is Chanon </Title>
+      <SubTitle> I&#39;m a software developer from Canada </SubTitle>
+      <IconGrid>
         {socialLinks.map((link, i) => {
           return (
             <a
-              key={i}
+              key={`${i}-${link.name}`}
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <LinkIcon icon={link.icon} size="3x" />
+              <Icon>{link.icon}</Icon>
             </a>
           );
         })}
-      </IconContainer>
-      <Title> Hello, my name is Chanon </Title>
-      <SubTitle> I&#39;m a software developer from Canada </SubTitle>
-
+      </IconGrid>
       <BuildingContainer>
         <img src={building} alt="building" />
       </BuildingContainer>

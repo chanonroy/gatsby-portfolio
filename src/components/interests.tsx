@@ -100,7 +100,7 @@ const Interests = () => {
         <Title> Some of my hobbies &amp; interests </Title>
         <Grid>
           {interests.map((interest, i) => (
-            <GridItem key={i}>
+            <GridItem key={`${i}-${interest.alt}`}>
               <img src={interest.img} alt={interest.alt} />
               <div> {interest.title} </div>
             </GridItem>

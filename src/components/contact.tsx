@@ -2,8 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Container from './shared/container';
 import drinksImg from '../images/drinks.svg';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { Email as EmailIcon } from '@styled-icons/material';
 
 const ContactCard = styled.div`
   background-color: #3e5675;
@@ -72,7 +71,7 @@ const Contact = () => {
             Send me a message and let&#39;s talk over coffee, tea, or a beer
           </p>
           <Email style={{ alignItems: 'center' }}>
-            <FontAwesomeIcon icon={faEnvelope} />
+            <EmailIcon size={20} />
             <div style={{ marginLeft: '8px' }}> chanonroy@gmail.com </div>
           </Email>
         </Text>

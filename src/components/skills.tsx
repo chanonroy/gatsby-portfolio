@@ -107,11 +107,11 @@ const Skills = () => {
         <Title> Some things that I have done </Title>
         <Grid>
           {skills.map((skill, i) => (
-            <Item key={i}>
+            <Item key={`${i}-${skill.title}`}>
               <Image src={skill.img} alt={skill.title} />
               <Subtitle> {skill.title} </Subtitle>
               {skill.subItems.map((item) => (
-                <Text key={i}> {item} </Text>
+                <Text key={item}> {item} </Text>
               ))}
             </Item>
           ))}
