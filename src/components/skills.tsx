@@ -60,6 +60,10 @@ const Grid = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
 
   @media (max-width: ${({ theme }) => `${theme.breakpoints.sm}px`}) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: ${({ theme }) => `${theme.breakpoints.xs}px`}) {
     grid-template-columns: 1fr;
   }
 `;

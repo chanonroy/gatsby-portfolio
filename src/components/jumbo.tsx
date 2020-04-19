@@ -43,7 +43,16 @@ const BuildingContainer = styled.div`
   display: flex;
   position: absolute;
   bottom: 0;
-  height: 300px;
+
+  img {
+    width: 500px;
+  }
+
+  @media (max-width: ${({ theme }) => `${theme.breakpoints.sm}px`}) {
+    img {
+      width: 300px;
+    }
+  }
 `;
 
 const SubTitle = styled.h3`
