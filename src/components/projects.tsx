@@ -68,7 +68,8 @@ const projects = [
     alt: 'dogs',
     description: 'Dog breed image classification',
     subtitle: 'Tensorflow, Keras, Jupyter Notebook',
-    url: 'https://github.com/chanonroy/keras-dog-classifier',
+    url:
+      'https://github.com/chanonroy/keras-dog-classifier/blob/master/train/predict.ipynb',
   },
   {
     img: rebalanceImg,
