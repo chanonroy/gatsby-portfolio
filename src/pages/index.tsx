@@ -4,6 +4,8 @@ import Profile from '../components/profile';
 import Layout from '../components/shared/layout';
 import SEO from '../components/shared/seo';
 import Skills from '../components/skills';
+import Contact from '../components/contact';
+import Projects from '../components/shared/projects';
 
 const IndexPage = () => (
   <Layout>
@@ -11,6 +13,8 @@ const IndexPage = () => (
     <Jumbo />
     <Profile />
     <Skills />
+    <Contact />
+    <Projects />
   </Layout>
 );
 

@@ -13,9 +13,9 @@ const skills = [
   {
     title: 'UI Development',
     subItems: [
+      'Design System',
       'Flexbox, CSS Grid',
       'Styled Components, Emotion',
-      'Shared Library (npm)',
     ],
     img: designImg,
   },

@@ -5,8 +5,8 @@ const Container = styled.div`
   margin-right: auto;
 
   @media (max-width: ${({ theme }) => `${theme.breakpoints.sm}px`}) {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   @media (min-width: ${({ theme }) => `${theme.breakpoints.sm}px`}) {
