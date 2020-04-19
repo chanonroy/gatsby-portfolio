@@ -30,10 +30,10 @@ const Title = styled.h2`
 const IconContainer = styled.div`
   margin-bottom: 36px;
   svg {
+    transition: ${({ theme }) => theme.transition.normal};
 		# this is gross
     opacity: 0.8 !important;
     &:hover {
-      transition: ${({ theme }) => theme.transition.normal};
       opacity: 1 !important;
     }
   }

@@ -21,7 +21,11 @@ const skills = [
   },
   {
     title: 'Web Apps',
-    subItems: ['React, Vue.js', 'Next.js, Gatsby', 'Apollo Client, TypeScript'],
+    subItems: [
+      'React, Vue.js',
+      'Django, Next.js, Gatsby',
+      'Apollo Client, TypeScript',
+    ],
     img: webImg,
   },
   {

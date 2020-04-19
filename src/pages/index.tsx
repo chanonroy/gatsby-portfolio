@@ -5,7 +5,7 @@ import Layout from '../components/shared/layout';
 import SEO from '../components/shared/seo';
 import Skills from '../components/skills';
 import Contact from '../components/contact';
-import Projects from '../components/shared/projects';
+import Projects from '../components/projects';
 
 const IndexPage = () => (
   <Layout>
