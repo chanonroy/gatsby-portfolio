@@ -3,21 +3,40 @@ import Container from './shared/container';
 import styled from 'styled-components';
 import timeGreeting from '../utils/time-greeting';
 
+import chanonImg from '../images/roy.svg';
+
 const ProfileCard = styled.div`
-  padding: 80px 0;
   background-color: #e5e5e5;
 `;
 
 const ProfileContainer = styled(Container)`
-  display: flex;
-`;
+  position: relative;
+  padding: 80px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
-const Section = styled.div`
-  width: 50%;
+  @media (max-width: ${({ theme }) => `${theme.breakpoints.sm}px`}) {
+    grid-template-columns: 1fr;
+    padding: 40px;
+  }
 `;
 
 const MutedText = styled.p`
   color: grey;
+`;
+
+const ChanonImg = styled.img`
+  position: absolute;
+  bottom: 0;
+  left: 15%;
+
+  @media (max-width: ${({ theme }) => `${theme.breakpoints.md}px`}) {
+    left: 5%;
+  }
+
+  @media (max-width: ${({ theme }) => `${theme.breakpoints.sm}px`}) {
+    display: none;
+  }
 `;
 
 const Profile = () => {
@@ -25,15 +44,17 @@ const Profile = () => {
   return (
     <ProfileCard>
       <ProfileContainer>
-        <Section></Section>
-        <Section>
+        <div>
+          <ChanonImg src={chanonImg} alt="chanon" />
+        </div>
+        <div>
           <h1> {greetingText} </h1>
           <MutedText>
             Thank you for making my website an exciting stop on your current
             internet browsing journey. Get ready to learn a bit more about me
             and some of the exciting things that I have been working on.
           </MutedText>
-        </Section>
+        </div>
       </ProfileContainer>
     </ProfileCard>
   );

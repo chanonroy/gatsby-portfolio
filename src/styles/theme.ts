@@ -5,7 +5,7 @@ const theme = {
     softGrey: '#999',
   },
   breakpoints: {
-    xs: 450,
+    xs: 500,
     sm: 768,
     md: 992,
     lg: 1200,

@@ -9,7 +9,7 @@ import globeImg from '../images/globe.svg';
 import graphImg from '../images/graph.svg';
 import georgeImg from '../images/george.svg';
 import taoismImg from '../images/taoism.svg';
-import dataImg from '../images/graph.svg';
+import barsImg from '../images/bars.svg';
 
 const interests = [
   {
@@ -49,7 +49,7 @@ const interests = [
   },
   {
     title: 'Data',
-    img: graphImg,
+    img: barsImg,
     alt: 'graph',
   },
 ];

@@ -8,6 +8,7 @@ import serverImg from '../images/server.svg';
 import mobileImg from '../images/mobile.svg';
 import webImg from '../images/web.svg';
 import circuitImg from '../images/circuit.svg';
+import Section from './shared/section';
 
 const skills = [
   {
@@ -54,8 +55,7 @@ const skills = [
   },
 ];
 
-const SkillsCard = styled.div`
-  padding: 80px 0;
+const SkillsCard = styled(Section)`
   background-color: white;
 `;
 

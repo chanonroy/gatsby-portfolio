@@ -5,8 +5,9 @@ import Container from './shared/container';
 import snakesImg from '../images/snake.jpg';
 import dogsImg from '../images/dogs.png';
 import rebalanceImg from '../images/rebalance.jpg';
+import Section from './shared/section';
 
-const ProjectCard = styled.div`
+const ProjectSection = styled(Section)`
   background-color: white;
   padding: 80px 0;
 `;
@@ -82,7 +83,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <ProjectCard>
+    <ProjectSection>
       <Container>
         <Title>Some of my side projects</Title>
         <Grid>
@@ -97,7 +98,7 @@ const Projects = () => {
           ))}
         </Grid>
       </Container>
-    </ProjectCard>
+    </ProjectSection>
   );
 };
 
