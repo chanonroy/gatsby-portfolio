@@ -16,6 +16,7 @@ const GradientBG = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: ${({ theme }) => `${theme.spacing.xs}px`};
   background: linear-gradient(to bottom, #1e5799 9%, #2989d8 69%, #65ade6 100%);
   height: 100vh;
   max-height: 1200px;
@@ -23,18 +24,27 @@ const GradientBG = styled.div`
 `;
 
 const Title = styled.h2`
-  font-size: 2em;
-  margin: 0;
+  font-size: 2.5em;
+  margin: 10px 0;
+
+  @media (max-width: ${({ theme }) => `${theme.breakpoints.sm}px`}) {
+    font-size: 1.7em;
+    text-align: center;
+  }
 `;
 
 const IconContainer = styled.div`
-  margin-bottom: 36px;
+  margin-bottom: 20px;
   svg {
     transition: ${({ theme }) => theme.transition.normal};
-		# this is gross
     opacity: 0.8 !important;
     &:hover {
       opacity: 1 !important;
+    }
+  }
+  @media (max-width: ${({ theme }) => `${theme.breakpoints.xs}px`}) {
+    svg {
+      font-size: 2.5em;
     }
   }
 `;
@@ -53,15 +63,30 @@ const BuildingContainer = styled.div`
       width: 300px;
     }
   }
+
+  @media (max-height: 600px) {
+    img {
+      display: none;
+    }
+  }
 `;
 
 const SubTitle = styled.h3`
   font-size: 1.3em;
+
+  @media (max-width: ${({ theme }) => `${theme.breakpoints.xs}px`}) {
+    font-size: 1em;
+    text-align: center;
+  }
 `;
 
 const LinkIcon = styled(FontAwesomeIcon)`
   margin: 0 14px;
   opacity: 0.8;
+
+  @media (max-width: ${({ theme }) => `${theme.breakpoints.md}px`}) {
+    margin: 0 8px;
+  }
 `;
 
 const socialLinks = [

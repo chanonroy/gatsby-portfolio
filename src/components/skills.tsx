@@ -8,7 +8,7 @@ import serverImg from '../images/server.svg';
 import mobileImg from '../images/mobile.svg';
 import webImg from '../images/web.svg';
 import circuitImg from '../images/circuit.svg';
-import Section from './shared/section';
+import Title from './shared/title';
 
 const skills = [
   {
@@ -55,8 +55,13 @@ const skills = [
   },
 ];
 
-const SkillsCard = styled(Section)`
+const SkillsCard = styled.div`
+  padding: 80px 0;
   background-color: white;
+
+  @media (max-width: ${({ theme }) => `${theme.breakpoints.sm}px`}) {
+    padding: ${({ theme }) => `${theme.spacing.sm}px 0`};
+  }
 `;
 
 const Grid = styled.div`
@@ -75,11 +80,10 @@ const Grid = styled.div`
 const Item = styled.div`
   text-align: center;
   margin-bottom: 80px;
-`;
 
-const Title = styled.h1`
-  text-align: center;
-  margin-bottom: 80px;
+  @media (max-width: ${({ theme }) => `${theme.breakpoints.sm}px`}) {
+    margin-bottom: ${({ theme }) => `${theme.spacing.sm}px`};
+  }
 `;
 
 const Image = styled.img`

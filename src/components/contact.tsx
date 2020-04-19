@@ -29,6 +29,10 @@ const Text = styled.div`
     width: 100%;
     text-align: center;
   }
+
+  @media (max-width: ${({ theme }) => `${theme.breakpoints.sm}px`}) {
+    margin-bottom: 100px;
+  }
 `;
 
 const Email = styled.div`
@@ -52,6 +56,10 @@ const Img = styled.img`
     right: 0;
     width: 350px;
   }
+
+  @media (max-width: ${({ theme }) => `${theme.breakpoints.sm}px`}) {
+    width: 200px;
+  }
 `;
 
 const Contact = () => {
@@ -59,7 +67,7 @@ const Contact = () => {
     <ContactCard>
       <ContactContainer>
         <Text>
-          <h1> Made it this far? </h1>
+          <h1> Interested in Chatting? </h1>
           <p>
             Send me a message and let&#39;s talk over coffee, tea, or a beer
           </p>

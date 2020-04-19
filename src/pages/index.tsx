@@ -11,7 +11,7 @@ import Footer from '../components/footer';
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Chanon Roy (2.0)" />
+    <SEO title="Chanon Roy" />
     <Jumbo />
     <Profile />
     <Skills />

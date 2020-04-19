@@ -10,6 +10,7 @@ import graphImg from '../images/graph.svg';
 import georgeImg from '../images/george.svg';
 import taoismImg from '../images/taoism.svg';
 import barsImg from '../images/bars.svg';
+import Title from './shared/title';
 
 const interests = [
   {
@@ -57,11 +58,10 @@ const interests = [
 const ProjectCard = styled.div`
   background-color: white;
   padding-bottom: 80px;
-`;
 
-const Title = styled.h1`
-  text-align: center;
-  margin-bottom: 80px;
+  @media (max-width: ${({ theme }) => `${theme.breakpoints.sm}px`}) {
+    padding-bottom: ${({ theme }) => `${theme.spacing.sm}px`};
+  }
 `;
 
 const Grid = styled.div`

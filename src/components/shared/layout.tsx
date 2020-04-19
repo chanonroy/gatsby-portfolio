@@ -17,8 +17,9 @@ const GlobalStyle = createGlobalStyle`
      color: inherit;
      text-decoration: none;
     }
-    h1 {
+    h1, h2 {
       line-height: 1.5;
+      margin-top: 0;
     }
   }
 `;

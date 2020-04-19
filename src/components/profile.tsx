@@ -17,7 +17,7 @@ const ProfileContainer = styled(Container)`
 
   @media (max-width: ${({ theme }) => `${theme.breakpoints.sm}px`}) {
     grid-template-columns: 1fr;
-    padding: 40px;
+    padding: ${({ theme }) => `${theme.spacing.sm}px`};
   }
 `;
 

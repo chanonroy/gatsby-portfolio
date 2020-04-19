@@ -5,16 +5,15 @@ import Container from './shared/container';
 import snakesImg from '../images/snake.jpg';
 import dogsImg from '../images/dogs.png';
 import rebalanceImg from '../images/rebalance.jpg';
-import Section from './shared/section';
+import Title from './shared/title';
 
-const ProjectSection = styled(Section)`
+const ProjectSection = styled.div`
   background-color: white;
   padding: 80px 0;
-`;
 
-const Title = styled.h1`
-  text-align: center;
-  margin-bottom: 80px;
+  @media (max-width: ${({ theme }) => `${theme.breakpoints.sm}px`}) {
+    padding: ${({ theme }) => `${theme.spacing.sm}px 0`};
+  }
 `;
 
 const Grid = styled.div`
@@ -29,7 +28,7 @@ const Grid = styled.div`
 
   @media (max-width: ${({ theme }) => `${theme.breakpoints.xs}px`}) {
     grid-template-columns: 1fr;
-    grid-column-gap: none;
+    grid-column-gap: 40px;
   }
 `;
 
